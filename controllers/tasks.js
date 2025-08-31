@@ -30,7 +30,11 @@ const getTask = async (req, res) => {
 };
 
 const updateTask = (req, res) => {
-  res.send("update task");
+  try {
+    const {id: taskId} = req.params;
+  } catch (error) {
+    
+  }
 };
 
 const deleteTask = async (req, res) => {
