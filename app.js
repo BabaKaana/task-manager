@@ -6,17 +6,14 @@ require('dotenv').config();
 
 // middleware
 
+app.use(express.static('./public'));
+
 app.use(express.json())
 
 
 // routes
 
-app.get('/hello', (req,res)=>{
-    res.send('<h1 style="font-size: 100px;">  Hello g, kia haal hai </h1>');
-})
-
 app.use('/api/v1/tasks', tasks)
-
 
 
 const port = 3000;
